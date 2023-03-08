@@ -1,9 +1,12 @@
 // Get current time in a specific time zone
 function getTime(timezone) {
   const now = new Date();
-  const options = {timeZone: timezone};
+  const options = {timeZone: timezone, hourCycle: 'h23', hour: '2-digit', minute: '2-digit'};
   return now.toLocaleTimeString('en-US', options);
 }
+
+
+
 
 // Update the clock for each time zone
 function updateClocks() {
@@ -46,7 +49,7 @@ function changeCard(n) {
     newIndex = 0;
   }
   // Display new card and update current index attribute
-  cards[newIndex].style.display = "block";
+  cards[newIndex].style.display = "flex";
   document.body.setAttribute("data-current-index", newIndex);
 }
 

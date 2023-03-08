@@ -1,12 +1,36 @@
+@font-face {
+    font-family: "Neue Montreal Bold";
+    src: url(./fonts/NeueMontreal-Bold.otf);
+}
+
+
+@font-face {
+    font-family: "Neue Montreal Light";
+    src: url(./fonts/NeueMontreal-Light.otf);
+}
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Neue Montreal Bold", sans-serif;
 	margin: 0;
 	padding: 0;
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
 }
 
 h1 {
 	text-align: center;
 	margin-top: 30px;
+}
+
+h2 {
+    outline: 3px solid white;
+    border-radius: 3rem;
+    width: fit-content;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
 }
 
 .container {
@@ -16,31 +40,41 @@ h1 {
     margin: 50px auto;
     max-width: 4000px;
     position: relative;
+    text-align: center;
 }
-
+.zone {
+    height: 700px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-top: -1.45rem;
+}
 .card {
-	background-color: #f2f2f2;
+	background-color: #000000;
 	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 300px;
-	min-width: 500px;
-	margin: 0 10px;
+	/* height: 100%; */
+	min-width: 100%;
+    object-fit: contain;
+    object-position: center;
+	margin: 8rem 10px;
 	transition: transform 0.3s ease-in-out;
     overflow: hidden;
 }
 
-.card h2 {
-	margin-top: 0;
-	font-size: 32px;
-}
+
 
 .card p {
-	font-size: 48px;
+	font-size: 14rem;
 	font-weight: bold;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    line-height: 1.05;
+    font-family: "Neue Montreal Light";
 }
 
 .arrow {
@@ -61,7 +95,7 @@ h1 {
 }
 
 .arrow:hover {
-	background-color: rgba(0,0,0,0.8);
+	color: rgba(91, 91, 91, 0.8);
 }
 
 .arrow.left {
